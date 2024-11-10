@@ -8,5 +8,5 @@ async def chat_options():
 
 @router.post("/chat/")
 async def chat(request: ChatRequest):
-    # Aquí va la lógica de tu función de chat
+    # Lógica del chat
     return {"response": "Respuesta del chatbot"}
