@@ -9,7 +9,7 @@ app = FastAPI()
 frontend_url = os.getenv("FRONTEND_URL", "http://localhost:3000")  # Cambia el valor predeterminado según tus necesidades
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://memory-gpt-frontend.vercel.app/"],  # Reemplaza con la URL de tu frontend en Vercel
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
