@@ -6,10 +6,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Cambia el origen según tu frontend
+    allow_origins=["*"],  # Temporalmente permitir todos los orígenes
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Permitir todos los métodos
+    allow_headers=["*"],  # Permitir todos los headers
 )
 
 # Incluye el router de chat
@@ -18,3 +18,4 @@ app.include_router(chat.router)
 @app.get("/")
 async def root():
     return {"message": "API está funcionando correctamente"}
+
